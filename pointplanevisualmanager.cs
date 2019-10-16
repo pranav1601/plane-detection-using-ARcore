@@ -22,7 +22,7 @@ public class PlaneVisualizationManager : MonoBehaviour
         {
             // Instantiate a plane visualization prefab and set it to track the new plane. The transform is set to
             // the origin with an identity rotation since the mesh for our prefab is updated in Unity World
-            // coordinates.
+            // coordinates.bot is placed where touched.
             var planeObject = Instantiate(TrackedPlanePrefab, Vector3.zero, Quaternion.identity,
                 transform);
             planeObject.GetComponent<TrackedPlaneVisualizer>().Initialize(curPlane);
